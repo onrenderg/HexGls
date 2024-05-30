@@ -27,7 +27,7 @@ app.configure(function() {
 io = io.listen(server);
 
 // Tell HTTP Server to begin listening for connections on port 3250
-server.listen(3250);
+server.listen(process.env.PORT || 3250);
 
 // Sockets object to save game code -> socked associations
 var socketCodes = {};
